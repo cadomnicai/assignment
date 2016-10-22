@@ -10,7 +10,7 @@ namespace SalesTax.Models
             Name = name;
             Price = price;
             IsImported = isImported ?? false;
-
+           
             if (IsImported)
                 SalesTax += Price * Taxes.Import;
         }

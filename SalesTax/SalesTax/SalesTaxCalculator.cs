@@ -10,10 +10,11 @@ namespace SalesTax
         static SalesTaxCalculator()
         {
             ReceiptDetails = new ReceiptDetails();
-            ReceiptDetails.ReceiptItems = new List<Product>();
         }
         public static ReceiptDetails Process(IEnumerable<Product> products)
         {
+            ResetValues();
+
             foreach (var product in products)
             {
                 ReceiptDetails.ReceiptItems.Add(product);
@@ -22,6 +23,13 @@ namespace SalesTax
             }
 
             return ReceiptDetails;
+        }
+
+        private static void ResetValues()
+        {
+            ReceiptDetails.ReceiptItems = new List<Product>();
+            ReceiptDetails.SalesTax = 0m;
+            ReceiptDetails.Total = 0m;
         }
     }
 }
