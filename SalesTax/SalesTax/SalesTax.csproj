@@ -43,12 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Taxes.cs" />
+    <Compile Include="Enums\ProductEnums.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ElectronicsProduct.cs" />
+    <Compile Include="Models\FoodProduct.cs" />
+    <Compile Include="Models\MagazinesProduct.cs" />
+    <Compile Include="Models\AllGoodsProduct.cs" />
+    <Compile Include="Models\ReceiptDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesTaxCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
