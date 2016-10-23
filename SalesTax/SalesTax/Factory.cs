@@ -25,6 +25,7 @@ namespace SalesTax
                     product = new ElectronicsProduct(name, price, isImported);
                     break;
             }
+
             product.CalculateTax();
 
             return product;

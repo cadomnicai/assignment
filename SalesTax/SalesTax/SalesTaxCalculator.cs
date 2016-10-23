@@ -1,4 +1,5 @@
 ﻿using SalesTax.Models;
+using SalesTax.Utils;
 using System;
 using System.Collections.Generic;
 
@@ -18,8 +19,8 @@ namespace SalesTax
             foreach (var product in products)
             {
                 ReceiptDetails.ReceiptItems.Add(product);
-                ReceiptDetails.SalesTax += Math.Round(product.SalesTax,2);
-                ReceiptDetails.Total += Math.Round(product.PriceIncludingSalesTax, 2);                
+                ReceiptDetails.SalesTax += Format.RoundTo2d(product.SalesTax);
+                ReceiptDetails.Total += Format.RoundTo2d(product.PriceIncludingSalesTax);                
             }
 
             return ReceiptDetails;

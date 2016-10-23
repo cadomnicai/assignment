@@ -1,4 +1,5 @@
 ﻿using SalesTax.Constants;
+using SalesTax.Utils;
 using System;
 
 namespace SalesTax.Models
@@ -25,7 +26,7 @@ namespace SalesTax.Models
 
         public decimal PriceIncludingSalesTax
         {
-            get { return Math.Round(Price + SalesTax, 2); }           
+            get { return Format.RoundTo2d(Price + SalesTax); }           
         }
 
         public abstract void CalculateTax();
